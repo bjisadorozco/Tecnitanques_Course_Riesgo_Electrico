@@ -41,7 +41,7 @@ function Index() {
       >
         <span className="button-1-shadow"></span>
         <span className="button-1-edge bg-secondary-color"></span>
-        <span className="button-1-front bg-main-color text hover:-translate-y-2 font-alata">
+        <span className="button-1-front bg-secondary-color text hover:-translate-y-2 font-alata">
           <FontAwesomeIcon icon={faHandPointRight} className="pr-1" /> Iniciar
         </span>
       </button>
