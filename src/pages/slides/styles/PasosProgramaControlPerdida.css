@@ -1,0 +1,117 @@
+.sortable-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.list-group-item {
+  position: relative;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  cursor: grab;
+  transition: all 0.15s ease;
+  touch-action: none;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-group-item > span:first-child {
+  flex: 1;
+}
+
+.list-group-item > span:last-child {
+  margin-left: 10px;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+.list-group-item:active {
+  cursor: grabbing;
+  background-color: #f0f0f0;
+}
+
+.correct-order {
+  background-color: #4CAF50 !important; /* Verde para correcto */
+  color: white !important; /* Texto en blanco */
+  border-color: #388E3C; /* Borde más oscuro */
+}
+
+.incorrect-order {
+  background-color: #F44336 !important; /* Rojo para incorrecto */
+  color: white !important; /* Texto en blanco */
+  border-color: #D32F2F; /* Borde más oscuro */
+}
+
+.avatar-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-boton {
+  width: 8rem;
+  height: auto;
+  margin: 1rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .sortable-list {
+    padding: 0 1rem;
+  }
+  
+  .list-group-item {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  .list-group-item select {
+    text-align: center;
+    width: 100px;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    font-size: 0.9rem;
+    z-index: 1000;
+  }
+
+  .list-group-item select:disabled {
+    /* background-color: transparent; */
+    cursor: not-allowed;
+    color: #163040;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+/* Accessibility improvements */
+.list-group-item:focus-within {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+select:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Ensure text remains visible during webfont load */
+.list-group-item {
+  font-display: swap;
+}
+
+/* Add smooth transition for transform */
+.sortable-list > * {
+  transition: transform 200ms ease;
+}
+

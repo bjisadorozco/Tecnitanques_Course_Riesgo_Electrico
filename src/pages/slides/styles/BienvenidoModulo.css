@@ -1,0 +1,106 @@
+/* Definimos la variables */
+:root {
+  --main-color: #003454 !important;
+}
+#boton1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20%;
+    left: 5%;
+    z-index: 3;
+    background-color: var(--main-color);
+  }
+  
+  #boton2 {
+    top: 20%;
+    right: 2%;
+    z-index: 2;
+    background-color: var(--main-color);
+  }
+  
+  #boton3 {
+    bottom: -4%;
+    right: 37%;
+    z-index: 1;
+    background-color: var(--main-color);
+  }
+
+  .botonporcentaje {
+    position: absolute;
+    background-color: #009A3D;
+    opacity: 0.9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 10px 20px;
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%; 
+    transition: transform 0.3s ease;
+  }
+
+  .botonporcentaje:hover {
+    transform: scale(1.1); /* Al pasar el ratón sobre el botón, lo escalamos al 110% */
+  }
+
+  /* @media (min-width: 1025px) {
+    #boton1 {
+        position: absolute;
+        top: 20%;
+        left: 8%;
+        z-index: 3;
+      }
+      
+      #boton2 {
+        position: absolute;
+        top: 25%;
+        right: 2%;
+        z-index: 2;
+      }
+      
+      #boton3 {
+        position: absolute;
+        bottom: 2%;
+        right: 40%;
+        z-index: 1;
+      }
+} */
+
+@media (max-width: 600px) {
+#boton1 {
+    bottom: 30%;
+    left: 10%;
+    z-index: 3;
+  }
+  
+  #boton2 {
+    bottom: 30%;
+    right: 5%;
+    z-index: 2;
+  }
+  
+  #boton3 {
+    bottom: 1%;
+    right: 43%;
+    z-index: 1;
+  }
+  
+  .botonporcentaje {
+    position: absolute;
+    background-color: #009A3D;
+    opacity: 0.9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 10px;
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    transition: transform 0.3s ease;
+  }
+}

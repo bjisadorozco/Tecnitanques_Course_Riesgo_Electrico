@@ -1,0 +1,1 @@
+export const COURSE_NAME = '| Riesgo Eléctrico (Aislamiento Seguro, Bloqueo y Tarjeteo)';

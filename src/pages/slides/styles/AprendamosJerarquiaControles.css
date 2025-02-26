@@ -1,0 +1,163 @@
+:root {
+  --main-color: #0A9EAD !important;
+  --bg-color: #003454 !important;
+}
+
+.no-clickeable {
+    pointer-events: none;
+  }
+  
+  .pyramid-container {
+    position: relative;
+    display: inline-block;
+    /* margin: 2rem 0; */
+    margin-bottom: 1rem;
+  }
+  
+  .img-piramide-causas {
+    max-width: 40%;
+    height: auto;
+    margin-left: 5%;
+    margin-bottom: 0;
+  }
+  
+  .audio-piramide {
+    width: 50%;
+    height: 40px;
+    margin-top: 2%;
+  }
+  
+  .tooltip-btn {
+    background-color: var(--bg-color);
+    color: white;
+    border: none;
+    border-radius: 15%;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .tooltip-btn:hover {
+    background-color: var(--main-color);
+  }
+  
+  .tooltip-pyramid {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+  }
+  
+  .tooltiptext {
+    visibility: hidden;
+    width: 600px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 15px;
+    line-height: 1.2em;
+    background-color: var(--main-color);
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 15px;
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    transform: translateY(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tooltiptext.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .position-tooltip-1 {
+    top: 5%;
+    left: 45%;
+    z-index: 2;
+  }
+  
+  .position-tooltip-2 {
+    top: 25%;
+    left: 42%;
+    z-index: 2;
+  }
+  
+  .position-tooltip-3 {
+    top: 43%;
+    left: 39%;
+    z-index: 2;
+  }
+  
+  .position-tooltip-4 {
+    top: 60%;
+    left: 36%;
+    z-index: 2;
+  }
+  
+  .position-tooltip-5 {
+    top: 80%;
+    left: 33%;
+    z-index: 2;
+  }
+  
+  @media (max-width: 768px) {
+    .img-piramide-causas {
+      max-width: 95%;
+    }
+
+    .pyramid-container{
+      margin: 2rem 0;
+    }
+    .quiz-container{
+      min-height: auto;
+    }
+  
+    .audio-piramide {
+      width: 80%;
+      height: 60px;
+    }
+  
+    .tooltip-btn {
+      font-size: 14px;
+    }
+  
+    .tooltiptext {
+      width: 350px;
+      font-size: 15px;
+      top: 10%;
+      left: 40%;
+    }
+  
+    .position-tooltip-1 {
+      top: 9%;
+      left: 2%;
+    }
+  
+    .position-tooltip-2 {
+      top: 27%;
+      left: 2%;
+    }
+  
+    .position-tooltip-3 {
+      top: 45%;
+      left: 2%;
+    }
+  
+    .position-tooltip-4 {
+      top: 63%;
+      left: 2%;
+    }
+  
+    .position-tooltip-5 {
+      top: 81%;
+      left: 2%;
+    }
+  }

@@ -1,0 +1,159 @@
+:root {
+  --main-color: #0A9EAD !important;
+}
+
+/* Contenedor de la imagen */
+.image-container1 {
+  position: relative;
+  display: flex;
+  max-width: 700px;
+  height: auto;
+  margin: 0 auto;
+  /* box-shadow: 0 14px 10px rgba(0, 0, 0, 0.5); */
+}
+
+.image-container1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+.image-container1.darkened img {
+  opacity: 0.5; /* Reducir opacidad de la imagen cuando esté activada */
+}
+.image-container1.darkened::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Botones circulares */
+.circle-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 12px;
+  border: 3px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  transition: transform 0.3s;
+  z-index: 2;
+}
+
+.circle-button:hover {
+  transform: scale(1.5);
+}
+
+.circle-button.active {
+  background-color: var(--main-color);
+}
+
+/* Caja de mensaje con número en la esquina */
+.message-box {
+  position: absolute;
+  background-color: white;
+  border: 2px solid var(--main-color);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  width: 250px;
+  animation: slideInUp 0.3s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.message-box h3 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: var(--purple);
+}
+
+.message-box .close-button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  cursor: pointer;
+  background-color: var(--main-color);
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* Número en la esquina superior izquierda del mensaje */
+.message-box .number-indicator {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Posiciones de los botones */
+#button1 { top: 20%; left: 60%; }
+#button2 { top: 26%; left: 27%; }
+#button3 { top: 57%; left: 48%; }
+#button4 { top: 4%; left: 47.5%; }
+
+/* Contenedor de audio */
+.audio-matriz {
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+}
+
+/* Adaptaciones para pantallas móviles */
+@media (max-width: 768px) {
+  .message-box {
+    position: absolute;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
+    max-width: 300px;
+  }
+
+  .circle-button {
+    width: 25px;
+    height: 25px;
+    font-size: 10px;
+  }
+
+  .image-container1 {
+    margin: 0 10px;
+  }
+}

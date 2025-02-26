@@ -1,0 +1,140 @@
+:root {
+  --main-color: #0A9EAD !important;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+}
+
+.col-lg-12,
+.col-md-12 {
+  width: 100%;
+}
+
+.col-lg-8 {
+  width: 66.66%;
+}
+
+.col-lg-4 {
+  display: flex;
+  align-items: center;
+  width: 33.33%;
+}
+
+.header-section-top {
+  background-color: var(--main-color);
+  padding-top: 2rem;
+}
+
+.m-4rem {
+  margin: 4rem;
+}
+
+.white {
+  color: white;
+}
+
+.purple {
+  color: #8B5CF6;
+}
+
+.card-grid-control {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.card-control {
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card-control:hover,
+.card-control.active {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.card-control:hover .card-text-control,
+.card-control.active .card-text-control {
+  color: white;
+}
+
+.card-control:hover .card-img-control,
+.card-control.active .card-img-control {
+  filter: brightness(0) invert(1);
+}
+
+.card-img-control {
+  width: 30%;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.card-text-control {
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: 1.2;
+}
+
+#selected-image-container-control {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#selected-image-control {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  margin: 0 auto;
+}
+.mobile-img-active{
+  display: none;
+}
+@media (min-width: 768px) {
+  .card-grid-control {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-img-control {
+    width: 20%;
+  }
+
+  #selected-image-container-control {
+    margin-top: 0;
+  }
+
+  #selected-image-control {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-lg-8,
+  .col-lg-4 {
+    width: 100%;
+  }
+  #selected-image-control {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+  .space-img{
+    margin-top: 2rem;
+  }
+  .mobile-img-disable{
+    display: block;
+  }
+  .mobile-img-active{
+    margin-top: 1rem;
+    display: block;
+  }
+}
