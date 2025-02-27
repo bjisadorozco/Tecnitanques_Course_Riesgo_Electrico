@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import Divisor1 from '../../assets/img/fondo01.webp';
-import Divisor2 from '../../assets/img/fondo01.webp';
-import Divisor3 from '../../assets/img/fondo01.webp';
-import imgDivisorMobile1 from '../../assets/img/fondo01.webp';
-import imgDivisorMobile2 from '../../assets/img/fondo01.webp';
-import imgDivisorMobile3 from '../../assets/img/fondo01.webp';
+import Divisor1 from '../../assets/img/momentos/momento1.webp';
+import Divisor2 from '../../assets/img/momentos/momento2.webp';
+import Divisor3 from '../../assets/img/momentos/momento3.webp';
+import imgDivisorMobile1 from '../../assets/img/momentos/momento1_mobile.webp';
+import imgDivisorMobile2 from '../../assets/img/momentos/momento2_mobile.webp';
+import imgDivisorMobile3 from '../../assets/img/momentos/momento3_mobile.webp';
 import useStore from "../../store";
 import BienvenidosModulo from "../../pages/slides/BienvenidosModulo";
 import EstructuraTematica from "../../pages/slides/EstructuraTematica";
