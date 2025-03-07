@@ -83,7 +83,7 @@ export default function Introduccion() {
           setArrayValidacionTraking((JSON.parse(datos.data_course[0].react_progress_object)));
           const storedArray = getArrayValidacionTraking();
           const sum = storedArray.length;
-          const porcentaje = (sum / parseInt(22)) * 100;
+          const porcentaje = (sum / parseInt(13)) * 100;
           setPorcentajeTraking(parseInt(porcentaje));
         } else {
           addNumber(parseInt(1))
