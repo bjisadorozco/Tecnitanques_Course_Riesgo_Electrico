@@ -1,23 +1,17 @@
+import { useEffect } from "react";
+import useStore from "../../store";
+import { initializeTooltips, reproducirAudio } from "../../assets/js/interactividad.js";
 import Title from "../../pages/components/Title";
 import Subtitle from "../../pages/components/Subtitle";
 import Paragraph from "../../pages/components/Paragraph";
 import Instruction from "../../pages/components/Instruction";
-import Button from "../../pages/components/Button";
-import ModalDialog from "../../pages/components/ModalDialog";
-import { faPaw, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
-import { useState, useEffect } from "react";
-import useStore from "../../store";
-import { initializeTooltips, reproducirAudio } from "../../assets/js/interactividad.js";
-import { useMediaQuery } from "react-responsive";
 import imgSabiasQue from "../../assets/img/botones/no-olvides-color.webp";
-import audioBienvenidos from "../../assets/audio/Sld_1_reflexionemos_v2.mp3";
-import "../slides/styles/BienvenidosModulo.css";
+import audioBienvenidos from "../../assets/audio/sld1_riesgo_electrico_ok.mp3";
 import audio82Porciento from "../../../src/assets/audio/SLIP_82_porciento.mp3";
 import audio11Porciento from "../../../src/assets/audio/SLIP_11_porciento.mp3";
 import audio7Porciento from "../../../src/assets/audio/SLIP_7_porciento.mp3";
 import ingeTecnitanques from "../../../src/assets/img/avatar_feliz.webp";
-// import "../../assets/css/style.css"
-import "../../pages/slides/styles/BienvenidoModulo.css"
+import "../../pages/slides/styles/BienvenidoModulo.css";
 
 function BienvenidosModulo() {
   const setIsOnDivisor = useStore((state) => state.setIsOnDivisor);
@@ -35,11 +29,22 @@ function BienvenidosModulo() {
     ]);
   }, []);
 
+  // Función para detener todos los audios excepto el que se está reproduciendo
+  const handleAudioPlay = (event) => {
+    const audios = document.querySelectorAll("audio");
+    audios.forEach((audio) => {
+      if (audio !== event.target) {
+        audio.pause();
+        audio.currentTime = 0; // Reinicia el audio
+      }
+    });
+  };
+
   return (
     // Contenedor principal con altura ajustada
     <div className="flex flex-col md:flex-row alt-sld w-full overflow-x-hidden mb-36 md:mb-0">
       {/* Columna izquierda */}
-      <div className="md:w-1/2 w-full bg-main-color py-6 md:py-3 px-[6px] md:px-[14px] flex flex-col justify-center items-center">
+      <div className="md:w-1/2 w-full md:h-screen bg-main-color py-6 md:py-3 px-[6px] md:px-[14px] flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center w-full">
           <div className="my-4 text-center">
             <Title>Bienvenidos al módulo</Title>
@@ -48,7 +53,7 @@ function BienvenidosModulo() {
           <div className="px-6 md:px-14 text-justify">
             <Paragraph justify="justify">
               De acuerdo con el NIOSH (El Instituto Nacional de Seguridad y Salud Ocupacional de Estados Unidos), los factores relacionados con ENERGÍAS PELIGROSAS que han ocasionado la muerte... son los siguientes:
-              En Morelco estamos comprometidos con tu Salud y tu Seguridad, por favor revisa atentamente este curso, puede SALVAR TU VIDA o la de un compañero tuyo en la operación.
+              En Tecnitanques estamos comprometidos con tu Salud y tu Seguridad, por favor revisa atentamente este curso, puede SALVAR TU VIDA o la de un compañero tuyo en la operación.
             </Paragraph>
           </div>
           <div className="px-6 md:px-14 flex justify-center w-auto">
@@ -57,7 +62,7 @@ function BienvenidosModulo() {
             </Instruction>
           </div>
           <div>
-            <audio controls className="media-espanol">
+            <audio controls className="media-espanol" onPlay={handleAudioPlay}>
               <source src={audioBienvenidos} type="audio/mp3" />
             </audio>
           </div>
@@ -91,6 +96,7 @@ function BienvenidosModulo() {
             className="media-espanol"
             id="slip_82_porciento"
             hidden
+            onPlay={handleAudioPlay}
           >
             <source src={audio82Porciento} type="audio/mp3" />
           </audio>
@@ -99,6 +105,7 @@ function BienvenidosModulo() {
             className="media-espanol"
             id="slip_11_porciento"
             hidden
+            onPlay={handleAudioPlay}
           >
             <source src={audio11Porciento} type="audio/mp3" />
           </audio>
@@ -107,6 +114,7 @@ function BienvenidosModulo() {
             className="media-espanol"
             id="slip_7_porciento"
             hidden
+            onPlay={handleAudioPlay}
           >
             <source src={audio7Porciento} type="audio/mp3" />
           </audio>
