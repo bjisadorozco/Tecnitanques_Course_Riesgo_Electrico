@@ -43,7 +43,7 @@ function EvaluacionCurso() {
                         setArrayValidacionTraking(JSON.parse(datos.data_course[0].react_progress_object));
                         const storedArray = getArrayValidacionTraking();
                         const sum = storedArray.length;
-                        const porcentajeCalculado = (sum / 22) * 100;
+                        const porcentajeCalculado = (sum / 13) * 100;
                         setPorcentajeTraking(parseInt(porcentajeCalculado));
                         setPorcentaje(parseInt(porcentajeCalculado)); // Actualizamos el estado
                     } else {
