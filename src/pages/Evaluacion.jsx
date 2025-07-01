@@ -108,10 +108,10 @@ function EvaluacionCurso() {
                         <div className=" flex justify-center items-center">
                             <button
                                 // Aun no le han creado evaluacion
-                                // onClick={() =>
-                                // (window.location.href =
-                                //     "https://tecnitanques.sofactia.pro/amatia/audit/1734369986/CeZMYIQzmulAW6efSnOmwr6Pp7nKbqxj5k4y8d732NgDTl93IPJ0ZaRoup5VGi1z")
-                                // }
+                                onClick={() =>
+                                (window.location.href =
+                                    "https://tecnitanques.sofactia.pro/amatia/audit/1751382752/aAc0Ur47pS96du3N5gDchlPnGq2b4bmk1r7h0FW6AfDYMZmuiqzSWR9QKMyEtnpz")
+                                }
                                 className="flex justify-center items-center bg-button-color hover:bg-button-color/80 rounded-full px-6 py-2 text-white mx-auto md:mx-0 my-4 transition duration-300"
                             >
                                 <i className="fa fa-check mr-2"></i> Iniciar Evaluación
