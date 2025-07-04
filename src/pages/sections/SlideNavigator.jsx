@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import Divisor1 from '../../assets/img/momentos/momento1.webp';
-import Divisor2 from '../../assets/img/momentos/momento2.webp';
-import Divisor3 from '../../assets/img/momentos/momento3.webp';
+import Divisor1 from '../../assets/img/momentos/momento-1.webp';
+import Divisor2 from '../../assets/img/momentos/momento-2.webp';
+import Divisor3 from '../../assets/img/momentos/momento-3.webp';
 import imgDivisorMobile1 from '../../assets/img/momentos/momento1_mobile.webp';
 import imgDivisorMobile2 from '../../assets/img/momentos/momento2_mobile.webp';
 import imgDivisorMobile3 from '../../assets/img/momentos/momento3_mobile.webp';
@@ -73,9 +73,9 @@ function SlideNavigator() {
       background={Divisor1}
       mobileBackground={imgDivisorMobile1}
       index={6}
-      line1="La Energía"
-      line2="En Nuestro"
-      line3="Trabajo"
+      line1="La Energía En"
+      line2="Nuestro Trabajo"
+      // line3="Trabajo"
       momento="Momento 1"
       key="DivisorMomentos"
     />,
@@ -86,9 +86,9 @@ function SlideNavigator() {
       background={Divisor2}
       mobileBackground={imgDivisorMobile2}
       index={6}
-      line1="Principios del"
-      line2="Bloqueo y Etiquetado"
-      line3="(LOTO)"
+      line1="Principios del Bloqueo"
+      line2="y Etiquetado (LOTO)"
+      // line3=""
       momento="Momento 2"
       key="DivisorMomentos"
     />,
@@ -100,9 +100,9 @@ function SlideNavigator() {
       background={Divisor3}
       mobileBackground={imgDivisorMobile3}
       index={6}
-      line1="Procedimiento de"
-      line2="Bloqueo y Etiquetado"
-      line3="(LOTO)"
+      line1="Procedimiento de Bloqueo"
+      line2="y Etiquetado (LOTO)"
+      // line3=""
       momento="Momento 3"
       key="DivisorMomentos"
     />,

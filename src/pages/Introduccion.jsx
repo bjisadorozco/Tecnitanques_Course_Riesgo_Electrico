@@ -24,7 +24,7 @@ export default function Introduccion() {
       icon: <User className="w-8 h-8" />,
       title: "Objetivo del Curso",
       content: [
-        { label: "Este curso le permitirá", value: " Desarrollar habilidades prácticas para manejar cargas de forma segura y eficiente, reduciendo el riesgo de lesiones." }
+        { label: "Este curso le permitirá", value: " Desarrollar las competencias necesarias para aplicar técnicas de aislamiento eléctrico seguro, bloqueo y etiquetado, con el fin de minimizar accidentes laborales relacionados con energía eléctrica, garantizando la protección del personal y el mantenimiento de condiciones seguras en el entorno de trabajo." }
       ]
     },
     {
@@ -97,7 +97,7 @@ export default function Introduccion() {
 
 
   return (
-    <div className="mx-auto p-6 md:h-screen h-auto"
+    <div className="mx-auto p-6 md:h-screen lg:h-screen"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(${background})`,
         backgroundSize: 'cover',

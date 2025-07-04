@@ -121,7 +121,7 @@
 		
 		.contInd {
 			position: absolute;
-      width: 90%;
+      width: 100%;
       z-index: 2;
       max-width: 700px;
       top: 15%;
@@ -218,6 +218,19 @@
 }
 
 .size-cuadros{
-  max-height: 200px !important;
+  max-height: 200px;
   overflow-y: auto;
+}
+
+@media (min-width: 1920px) {
+  .contInd {
+    max-width: 1200px;
+  }
+  .pantallas-grandes {
+    font-size: 6rem;
+  }
+  .size-cuadros {
+    max-height: 100%;
+    font-size: 1.6rem;
+  }
 }

@@ -20,7 +20,7 @@ function Index() {
           <img src={Logo} alt="LogoW" />
         </div>
         <div>
-          <h1 className="font-alata font-bold mt-2 text-white">
+          <h1 className="font-alata font-bold mt-2 text-white pantallas-grandes">
             Riesgo Eléctrico
             <br /> (Aislamiento Seguro,
             <br /> Bloqueo y Tarjeteo)

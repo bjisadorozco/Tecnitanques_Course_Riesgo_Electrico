@@ -68,8 +68,7 @@ function EstructuraTematica() {
                         <h3>2 - Principios del bloqueo y etiquetado (LOTO)</h3>
                         <hr />
                         <p>
-                          Recordaremos lconceptos clave de Energía CERO, y
-                          el proceso y tipos de etiquetado clave.
+                          Recordaremos los conceptos clave de Energía CERO, así como el proceso y los tipos de etiquetado más importantes.
                         </p>
                       </div>
                     </div>
